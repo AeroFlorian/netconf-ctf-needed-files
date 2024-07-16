@@ -2,6 +2,8 @@
 
 This is a small a friendly set of puzzles to get to know NETCONF Protocol.
 
+Flags are all in the same format: `NOKCTF{The_flag_you_want}` , please submit the whole flag (not only the one in brackets)
+
 ## How to Participate in the NETCONF CTF
 In order to be able to participate, you will need:
 - Access to a Linux VM (or WSL)
@@ -37,6 +39,9 @@ You will need, installed on your VM:
 
 You must clone the necessary files with the following command:
 `git clone https://github.com/AeroFlorian/netconf-ctf-needed-files.git`
+
+Then get in the repository:
+`cd netconf-ctf-needed-files`
 
 You can then launch any challenge with the command `make launch_challenge CHALLENGE=X` (X being your challenge number). It will create the docker containers for netopeer2-cli and the Netconf server. It will also launch the proper scenario on the Netconf server side.
 
