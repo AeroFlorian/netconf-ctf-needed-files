@@ -1,0 +1,5 @@
+module: module-containing-flag
+
+  notifications:
+    +---n here-is-the-flag-take-it
+       +--ro flag?   string

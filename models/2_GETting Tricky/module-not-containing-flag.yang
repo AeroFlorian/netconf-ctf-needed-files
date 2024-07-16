@@ -1,0 +1,25 @@
+module module-not-containing-flag {
+    yang-version 1.1;
+    namespace "urn:module-noflag:1.0";
+  prefix "module-noflag";
+
+  contact
+    "florian.salaun@nokia.com";
+
+  description
+    "Basic model used for a CTF aiming at make people familiar with NETCONF";
+
+  revision "2024-07-11" {
+   description "Creation";
+  }
+
+  container no-flag-container
+  {
+      leaf no-flag
+      {
+          config false;
+          type string;
+          description "Not The flag";
+      }
+  }
+}

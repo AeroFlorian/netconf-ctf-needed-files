@@ -1,0 +1,3 @@
+module: module-containing-flag
+  +--rw flag-container
+     +--ro flag?   string

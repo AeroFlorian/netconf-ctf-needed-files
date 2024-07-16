@@ -1,0 +1,9 @@
+module: module-containing-flag
+  +--rw flag-container
+     +--rw objects-already-created* [name]
+     |  +--rw name    string
+     +--rw objects-to-create* [name]
+     |  +--rw name                      string
+     |  +--rw points-to                 -> /flag-container/objects-already-created/name
+     |  +--rw set-me-to-get-the-flag?   boolean
+     +--ro flag?                      string

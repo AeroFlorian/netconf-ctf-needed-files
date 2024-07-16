@@ -1,0 +1,8 @@
+module: module-containing-flag
+  +--rw flag-container
+     +--rw objects-to-set
+     |  +--rw objects* [name]
+     |     +--rw name                      string
+     |     +--rw set-one-of-this*          string
+     |     +--rw set-me-to-get-the-flag?   boolean
+     +--ro flag?             string

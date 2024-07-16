@@ -1,0 +1,3 @@
+module: module-not-containing-flag
+  +--rw no-flag-container
+     +--ro no-flag?   string

@@ -1,0 +1,32 @@
+module module-containing-flag {
+    yang-version 1.1;
+    namespace "urn:module-flag:1.0";
+  prefix "module-flag";
+
+  contact
+    "florian.salaun@nokia.com";
+
+  description
+    "Basic model used for a CTF aiming at make people familiar with NETCONF";
+
+  revision "2024-07-11" {
+   description "Creation";
+  }
+
+  container flag-container
+  {
+
+      leaf set-me-to-get-the-flag
+      {
+          type boolean;
+          description "Set me to true to get the flag";
+      }
+
+      leaf flag
+      {
+          config false;
+          type string;
+          description "The flag";
+      }
+  }
+}

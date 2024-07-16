@@ -1,0 +1,5 @@
+module: module-containing-flag
+  +--rw flag-container
+     +--rw objects-you-want-to-delete* [name]
+     |  +--rw name    string
+     +--ro flag?                         string

@@ -1,0 +1,4 @@
+module: module-containing-flag
+  +--rw flag-container
+     +--rw set-me-to-get-the-flag?   boolean
+     +--ro flag?                     string

@@ -1,0 +1,6 @@
+module: module-containing-flag
+
+  rpcs:
+    +---x give-me-the-flag
+       +--ro output
+          +--ro flag?   string
