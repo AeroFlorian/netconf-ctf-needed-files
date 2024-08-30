@@ -82,3 +82,28 @@ Same as Edit-config, you can user command `user-rpc`to send RPCs (that are not e
 Same as edit-config, easiest way is to use `user-rpc` and use vim to paste the rpc you want to send:
 
 ![User RPC](doc/user_rpc.png)
+
+## ORAN CTF
+
+### How to launch challenges
+
+For O-RAN Challenges, a different docker image is used for the Netconf Server, as O-RAN official Yang Models are installed
+
+To launch each of the challenges, use command `make launch_oran_challenge CHALLENGE=X`.
+
+You can still use keyword `make connect_cli` to enter cli container and connect automatically to the Netconf Server.
+
+As opposed to the NETCONF challenges, the flags will not be directly readable from the data.
+
+Each challenge will ask you one type of data, you will then have to ask the Netconf Server for validation, using `validation` module (get the schema yourself!).
+
+In case your answer is the right one, the Netconf Server will give you the flag.
+
+### Links and Materials
+
+In order to understand what is needed, you will need to have access to:
+
+- Official WG4 MPlane Specification
+- Official Yang Models provided by O-RAN WG4
+
+The links are available in the home page of the Netconf + ORAN CTF.

@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+    challenges:
+        image: ${PREFIX}ctf_oran_radio:v0.1
+        container_name : ctf_oran_radio
+        environment:
+            - CHALLENGE_NUMBER=${CHALLENGE:-1}
+
+    cli:
+        image: ${PREFIX}cli_ctf:v0.1
+        container_name : cli_ctf
+        command: sleep infinity
+        environment:
+            - CHALLENGE_NUMBER=${CHALLENGE:-1}
