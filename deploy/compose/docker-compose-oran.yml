@@ -7,7 +7,7 @@ services:
             - CHALLENGE_NUMBER=${CHALLENGE:-1}
 
     cli:
-        image: ${PREFIX}cli_ctf:v0.1
+        image: ${PREFIX}cli_ctf_oran:v0.1
         container_name : cli_ctf
         command: sleep infinity
         environment:

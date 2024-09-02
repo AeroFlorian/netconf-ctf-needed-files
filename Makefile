@@ -14,7 +14,7 @@ launch_compose_dev:
 	PREFIX="" docker-compose -f deploy/compose/docker-compose.yml up -d
 
 launch_challenge: stop_compose
-	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" CHELLENGE=$(CHALLENGE) docker-compose -f deploy/compose/docker-compose.yml up -d
+	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" CHALLENGE=$(CHALLENGE) docker-compose -f deploy/compose/docker-compose.yml up -d
 
 launch_oran_challenge: stop_compose
 	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" CHALLENGE=$(CHALLENGE) docker-compose -f deploy/compose/docker-compose-oran.yml up -d
