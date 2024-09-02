@@ -107,3 +107,8 @@ In order to understand what is needed, you will need to have access to:
 - Official Yang Models provided by O-RAN WG4
 
 The links are available in the home page of the Netconf + ORAN CTF.
+
+## Update your images
+
+In case of newly added challenges, you might need to update your images.
+In case you have an issue with `make connect_cli`, please use command `make pull_latest_images` and try again.
