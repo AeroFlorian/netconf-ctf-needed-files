@@ -41,4 +41,6 @@ push_to_artifactory: all
 pull_latest_images:
 	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml down
 	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml rm -f
+	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun//ctf_oran_radio:v0.1
+	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/cli_ctf_oran:v0.1
 	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml pull
