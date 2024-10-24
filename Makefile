@@ -33,14 +33,18 @@ connect_cli:
 
 
 push_to_artifactory: all
-	docker tag ctf_netconf_oran:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/$(USER)/ctf_netconf_oran:v$(VERSION)
-	docker tag cli_ctf:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/$(USER)/cli_ctf:v$(VERSION)
-	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/$(USER)/ctf_netconf_oran:v$(VERSION)
-	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/$(USER)/cli_ctf:v$(VERSION)
+	docker tag ctf_netconf_oran:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/ctf_netconf_oran:v$(VERSION)
+	docker tag cli_ctf:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/cli_ctf:v$(VERSION)
+	docker tag cli_ctf_oran:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/cli_ctf_oran:v$(VERSION)
+	docker tag cli_ctf_oran:v$(VERSION) airphone-docker-local.artifactory-espoo1.int.net.nokia.com/ctf_oran_radio:v$(VERSION)
+	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/ctf_netconf_oran:v$(VERSION)
+	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/cli_ctf:v$(VERSION)
+	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/cli_ctf_oran:v$(VERSION)
+	docker push airphone-docker-local.artifactory-espoo1.int.net.nokia.com/ctf_oran_radio:v$(VERSION)
 
 pull_latest_images:
-	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml down
-	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml rm -f
-	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun//ctf_oran_radio:v0.1
-	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/cli_ctf_oran:v0.1
-	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/dev/fsalaun/" docker-compose -f deploy/compose/docker-compose.yml pull
+	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/" docker-compose -f deploy/compose/docker-compose.yml down
+	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/" docker-compose -f deploy/compose/docker-compose.yml rm -f
+	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/ctf_oran_radio:v0.1
+	docker rmi airphone-docker-local.artifactory-espoo1.int.net.nokia.com/cli_ctf_oran:v0.1
+	PREFIX="airphone-docker-local.artifactory-espoo1.int.net.nokia.com/" docker-compose -f deploy/compose/docker-compose.yml pull
